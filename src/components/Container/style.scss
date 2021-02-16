@@ -1,13 +1,20 @@
+@import '../../styles/variables.scss';
+
 .cont-left{
 display: flex;
-
+color: $gristext; 
+h1{
+  color: white;
+}
 
 }
 
 .cont-right{
+background-color: $grisfondo; 
 display: flex;
 flex-direction: column;
-width: 82,5%;
+width: 82%;
+
 
 }
 
@@ -19,13 +26,16 @@ width: 82,5%;
 
 .cont-topmenu{
 border: 1px solid blueviolet; 
+padding-left: 9px;
 width: 100%;
 }
 .cont-midcont{
-border: 1px solid lightgreen;  
+border: 1px solid lightgreen; 
+padding: 9px 0px 0px 9px;
  width: 100%;
 }
 .cont-player{
 border: 1px solid royalblue; 
+color: $gristext; 
  width: 99,9%;
 }
