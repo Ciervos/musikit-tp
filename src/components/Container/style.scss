@@ -13,29 +13,36 @@ h1{
 background-color: $grisfondo; 
 display: flex;
 flex-direction: column;
-width: 82%;
+width: 99%;
 
 
 }
 
 
 .cont-sideinfo{
- border: 1px solid salmon; 
+ 
  width: 230px;
 }
 
 .cont-topmenu{
-border: 1px solid blueviolet; 
+
 padding-left: 9px;
-width: 100%;
+width: 99%;
 }
 .cont-midcont{
-border: 1px solid lightgreen; 
+
 padding: 9px 0px 0px 9px;
- width: 100%;
+ width: 99%;
 }
 .cont-player{
-border: 1px solid royalblue; 
+
+background-color: $grisplayer; 
+bottom: 0px;  
 color: $gristext; 
- width: 99,9%;
+height: auto;
+left: 0px;
+padding: 3px 0px 3px 9px;
+position: sticky;
+width: 99,9%;
+z-index: 50;
 }
