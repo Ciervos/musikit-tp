@@ -5,7 +5,6 @@ import './style.scss'
 
 function Container(props) {
 
-console.log(props)
 
   return (
  <><div className="cont-left"><div className="cont-sideinfo"><p>"Side Info"</p></div>

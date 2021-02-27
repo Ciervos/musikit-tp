@@ -42,6 +42,7 @@ const [playlistdata,setPlaylistdata] = useState([])
   setPlaylistdata(dataJson)
   if(dataJson.tracks){
     setTracks(dataJson.tracks.items)
+    
   }
   
     
@@ -55,7 +56,7 @@ const [playlistdata,setPlaylistdata] = useState([])
     <Container>
      <Playlists id={info.id} name={info.name} img={info.img} tracks={tracks} owner={info.owner} onClick={false}/> 
      {tracks.map((track,key)=>{
-     return (<Tracks name={track.track.name} artist={track.track.artists[0].name} album={track.track.album.name} key={key}/>)
+     return (<Tracks name={track.track.name} artist={track.track.artists[0].name} album={track.track.album.name} time={track.track.duration_ms} key={key}/>)
    })}
     </Container>
   );
