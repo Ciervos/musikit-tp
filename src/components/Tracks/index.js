@@ -45,8 +45,8 @@ useEffect(()=> {
     <div className="tracks-cont">
   <img height="50px" width="50px" src={note}/>
   <div>
-   <p>{props.name}</p>
-  <p>{props.artist} - {props.album}</p>
+   <p className="tracks-songname">{props.name}</p>
+  <p className="tracks-songinfo">{props.artist} - {props.album}</p>
   </div>
   <p className="tracks-songtime">{minutes}</p>
     </div>

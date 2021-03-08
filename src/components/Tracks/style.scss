@@ -2,10 +2,18 @@
   display: flex;
   font-size: 14px;
   height: 50px;
-  margin: 20px;
+  margin: 10px 10px 30px 10px;
   width: 70%;
-  line-height: 50%;
-
+  
+.tracks-songname{
+ color: white; 
+ line-height: 12px;
+ 
+}
+.tracks-songinfo{
+  font-size: 12px;  
+  line-height: 14px;
+ }
 .tracks-songtime{
 position: absolute;  
 right: 30px;

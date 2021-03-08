@@ -4,6 +4,7 @@ import Tracks from '../../components/Tracks';
 import {useLocation} from "react-router-dom";
 import {useSelector} from "react-redux";
 import Container from "../../components/Container";
+import Button from '../../components/Button';
 import './style.scss';
 
 
@@ -54,10 +55,13 @@ const [playlistdata,setPlaylistdata] = useState([])
 
   return (
     <Container>
-     <Playlists id={info.id} name={info.name} img={info.img} tracks={tracks} owner={info.owner} onClick={false}/> 
-     {tracks.map((track,key)=>{
+     <div className="playlist-general"><div className="playlist-col01"><Playlists id={info.id} name={info.name} img={info.img} tracks={tracks} owner={info.owner} onClick={false}/><Button onClick={false} label="REPRODUCIR" />
+      {tracks.length>0? <p>{tracks.length} Canciones</p>:false}
+      
+       <p>place holder corazón</p></div> 
+     <div> {tracks.map((track,key)=>{
      return (<Tracks name={track.track.name} artist={track.track.artists[0].name} album={track.track.album.name} time={track.track.duration_ms} key={key}/>)
-   })}
+   })}</div></div>
     </Container>
   );
 }

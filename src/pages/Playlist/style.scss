@@ -1,0 +1,16 @@
+.playlist-general{
+  border: 1px solid coral;
+  display: flex;
+  flex-flow: row;
+}
+
+.playlist-col01{
+
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  padding-top: 20px;
+  width: 40%;
+}
+
+
