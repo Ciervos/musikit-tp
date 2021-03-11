@@ -1,5 +1,5 @@
 .playlist-general{
-  border: 1px solid coral;
+
   display: flex;
   flex-flow: row;
 }
@@ -13,4 +13,9 @@
   width: 40%;
 }
 
+.playlist-heart{
+  margin-top: 14px;
+  height: 25px;
+  width: 25px;
+}
 
