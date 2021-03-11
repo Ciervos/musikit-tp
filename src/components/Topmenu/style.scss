@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+.topmenu-items{
+
+  font-family: 'Rubik', sans-serif;
+  font-size: 12px;
+  margin: 15px;
+
+ &:hover{
+  color: white;
+  cursor: pointer;
+  text-decoration: underline solid $verdetify 2px;
+  
+
+  }
+
+}
