@@ -24,6 +24,7 @@ const [playlistdata,setPlaylistdata] = useState([])
 const [likes,setLikes] = useState(false);
 
 // Problemas presentes: refreshear la página crea problema en autentificación.
+// probar solucionar con redux
 
 
 

@@ -1,10 +1,14 @@
 @import '../../styles/variables.scss';
-
+a:link, a:visited, a:active {
+  text-decoration:none;
+  color: $gristext;
+}
 .topmenu-items{
 
   font-family: 'Rubik', sans-serif;
   font-size: 12px;
   margin: 15px;
+ 
 
  &:hover{
   color: white;
