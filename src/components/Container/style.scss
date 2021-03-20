@@ -21,6 +21,8 @@ width: 99%;
 
 
 .cont-sideinfo{
+ display: flex;
+ flex-flow: column;
  background-color: black; 
  width: 230px;
 }

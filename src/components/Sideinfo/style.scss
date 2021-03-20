@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+
+.sideinfo-logo{
+  height: 25px;
+  margin: 15px;
+  width: 25px;
+}
+.sideinfo-title{
+
+color: $gristext;
+font-size: 14px;
+margin: 15px 0px 0px 15px;
+
+
+}
+
+.sideinfo-sideicons{
+  height: 25px;
+  width: 25px;
+}
+
+.sideinfo-menu{
+  margin: 15px 0px 0px 15px;
+}
+
+.sideinfo-menutxt{
+  font-size: 14px;
+  font-family: 'Rubik', sans-serif;
+  margin-left: 10px;
+
+  &:link, &:visited, &:active {
+    text-decoration:none;
+    color: $gristext;
+  }
+
+ &:hover{
+  color: white;
+  cursor: pointer;
+  text-decoration: underline solid $verdetify 2px;
+  
+
+  }
+}
