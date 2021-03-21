@@ -22,7 +22,7 @@ function Dashboard() {
  const [lasttracks,setLasttracks] = useState([]);
 
  useEffect(()=> {
-   fetchData("https://api.spotify.com/v1/me")
+ 
    fetchData("https://api.spotify.com/v1/me/playlists?offset=0&limit=5")
    fetchData("https://api.spotify.com/v1/me/player/recently-played?limit=5")
    

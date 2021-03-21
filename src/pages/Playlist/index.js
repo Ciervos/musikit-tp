@@ -24,7 +24,7 @@ const getid = location.pathname.split("/");
 const pageid= getid[2]
 const dispatch = useDispatch();
 const [tracks,setTracks] = useState([])
-const [playlistdata,setPlaylistdata] = useState([])
+//const [playlistdata,setPlaylistdata] = useState([])
 const [likes,setLikes] = useState(false);
 
 // Para evitar que al apretar f5, se borre el token de redux y se pierda la autorizacion, se crea la funcion de putInfoInLStore
@@ -51,7 +51,7 @@ const [likes,setLikes] = useState(false);
   const dataJson = await data.json();
 
   
-  setPlaylistdata(dataJson)
+  //setPlaylistdata(dataJson) -> usado originarimente antes de la variable info, comentado y guardado de referencia
   if(dataJson.tracks){
     setTracks(dataJson.tracks.items)
     
