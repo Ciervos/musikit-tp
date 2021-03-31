@@ -8,9 +8,9 @@ import note from '../../img/fullheart.gif';
 
 function Sideinfo() {
   const testtoken = useSelector((state)=>state.token)
-  const atoken = testtoken.length>3 ? testtoken :localStorage.getItem("token")
-  const [userdata,setUserdata] = useState([])
-
+  const atoken = testtoken.length>3&&testtoken===localStorage.getItem("token") ? testtoken :localStorage.getItem("token")
+  const [userdata,setUserdata] = useState({name:"Loading...",avatar: note})
+//to fix: arreglar tema de token, sideinfo carga antes que al store le llegue el token actualizado. Una nueva sessión arruina el acceso
   useEffect(()=> {
     fetchData("https://api.spotify.com/v1/me")
   
@@ -27,7 +27,9 @@ function Sideinfo() {
     const dataJson = await data.json();
     
     console.log(dataJson)
+    console.log(dataJson.images)
     setUserdata({
+     ...userdata,  
      name: dataJson.display_name,
      avatar:  dataJson.images[0].url, 
     })
@@ -68,7 +70,7 @@ function Sideinfo() {
             </div> 
 
             <div className="sideinfo-user">
-               <img className="sideinfo-useravatar" src={userdata.avatar}/>
+              <img className="sideinfo-useravatar" src={userdata.avatar}/>
                <span>{userdata.name}</span>
             </div>
 
