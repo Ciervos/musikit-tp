@@ -3,7 +3,7 @@ import Playlists from '../../components/Playlists';
 import {useLocation} from "react-router-dom";
 import { useHistory } from "react-router";
 import { useDispatch} from "react-redux";
-import { addToken } from "../../store";
+import { addToken,addPerson } from "../../store";
 import Container from "../../components/Container";
 import './style.scss';
 
@@ -25,6 +25,7 @@ function Dashboard() {
  
    fetchData("https://api.spotify.com/v1/me/playlists?offset=0&limit=5")
    fetchData("https://api.spotify.com/v1/me/player/recently-played?limit=5")
+   fetchData("https://api.spotify.com/v1/me")
    
    dispatch(addToken(atoken));
 },[]);
@@ -43,6 +44,9 @@ async function fetchData(url) {
     setPlaydata(dataJson.items)
     }else if(url==="https://api.spotify.com/v1/me/player/recently-played?limit=5"){
      setLasttracks(dataJson.items)
+    }else if(url==="https://api.spotify.com/v1/me"){
+
+      dispatch(addPerson(dataJson.display_name,dataJson.images[0].url))
     }
 
  }
