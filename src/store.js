@@ -5,7 +5,8 @@ import placeholder from '../src/img/avatar-placeholder.png';
 const InitialState = {
   token: "",
   name: "Loading...",
-  avatar: placeholder, 
+  avatar: placeholder,
+  mainurl: "http://localhost:3000", 
 };
 
 export const reducer = (state=InitialState, action) =>{
