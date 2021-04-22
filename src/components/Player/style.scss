@@ -1,0 +1,56 @@
+@import '../../styles/variables.scss';
+
+.player-cont{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+width: 99%;
+height: 60px;
+
+  .player-songinfo{
+  display: flex;
+  flex-direction: row;
+  
+  height: 60px;
+  width: 20%;
+ 
+  .player-nameauthor{
+    display: flex;
+    flex-direction: column;
+  & .songname{
+    color: white;
+    font-size: 14px;
+    margin: 10px 0px 5px 10px;
+
+  }
+
+  & .songauthor{
+    color: $gristext;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+    }
+  } 
+
+  .player-player{
+    background-color: cadetblue;
+    height: 60px;
+    width: 50%;
+    
+   
+  } 
+
+  .player-volumen{
+    background-color: black;
+    height: 60px;
+    width: 20%;
+  } 
+
+  .player-songimg{
+   margin-top: 5px; 
+   height: 50px;
+   width: 50px; 
+  }
+
+ } 
+
