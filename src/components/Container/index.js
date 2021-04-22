@@ -1,6 +1,7 @@
 import React from 'react';
 import Topmenu from "../Topmenu/index";
 import Sideinfo from "../Sideinfo/index";
+import Player from "../Player/index";
 import './style.scss'
 
 
@@ -14,7 +15,7 @@ function Container(props) {
    <div className="cont-topmenu"><Topmenu/></div>
  <div className="cont-midcont">{props.children}</div>
  </div></div>
- <div className="cont-player"><p>"Player"</p></div>
+ <div className="cont-player"><Player/></div>
  </>
   );
 }

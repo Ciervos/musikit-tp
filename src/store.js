@@ -7,6 +7,12 @@ const InitialState = {
   name: "Loading...",
   avatar: placeholder,
   mainurl: "http://localhost:3000", 
+  playertrack:{
+   name: "Loading",
+   author: "Loading", 
+   img: placeholder,
+   duration: "3:33",
+  },
 };
 
 export const reducer = (state=InitialState, action) =>{
