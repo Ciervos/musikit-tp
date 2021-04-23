@@ -3,7 +3,7 @@ import Playlists from '../../components/Playlists';
 import {useLocation} from "react-router-dom";
 import { useHistory } from "react-router";
 import { useDispatch} from "react-redux";
-import { addToken,addPerson } from "../../store";
+import { addToken,addPerson,addTrack } from "../../store";
 import Container from "../../components/Container";
 import './style.scss';
 
@@ -58,6 +58,9 @@ async function fetchData(url) {
   info, 
   atoken,
  })
+ if(info.tracks===""){
+  dispatch(addTrack(info))
+ }
  }
   return (
     <Container>

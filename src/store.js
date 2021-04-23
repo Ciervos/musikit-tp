@@ -1,6 +1,7 @@
 import {createStore, applyMiddleware} from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import placeholder from '../src/img/avatar-placeholder.png';
+import albumplaceholder from '../src/img/marinaalbum.jpg';
 
 const InitialState = {
   token: "",
@@ -8,9 +9,9 @@ const InitialState = {
   avatar: placeholder,
   mainurl: "http://localhost:3000", 
   playertrack:{
-   name: "Loading",
-   author: "Loading", 
-   img: placeholder,
+   name: "Purge The Poison",
+   author: "MARINA", 
+   img: albumplaceholder,
    duration: "3:33",
   },
 };
@@ -28,6 +29,16 @@ export const reducer = (state=InitialState, action) =>{
         name: action.name,
         avatar: action.avatar,
         }
+    case "ADD_TRACK":
+      return {
+        ...state,
+        playertrack:{
+          name: action.info.name,
+          author: action.info.owner, 
+          img: action.info.img,
+          duration: "3:33",
+         },
+        }    
     default:
       return state;
   }
@@ -47,6 +58,14 @@ export const addPerson = (name,avatar) => (dispatch) =>{
     type: "ADD_PERSON",
     name,
     avatar
+  });
+}
+
+export const addTrack = (info) => (dispatch) =>{
+  
+  return dispatch({
+    type: "ADD_TRACK",
+    info,
   });
 }
 
