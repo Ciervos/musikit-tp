@@ -33,7 +33,10 @@ height: 60px;
   } 
 
   .player-player{
-    background-color: cadetblue;
+    
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     height: 60px;
     width: 50%;
     
@@ -52,5 +55,18 @@ height: 60px;
    width: 50px; 
   }
 
+  .player-songheart{
+    cursor: pointer; 
+    margin: 14px 0px 0px 14px;
+    height: 20px;
+    width: 20px;
+  }
+
+  .player-songicons{
+    cursor: pointer; 
+    //margin: 14px 0px 0px 14px;
+    height: 25px;
+    width: 25px;
+  }
  } 
 
