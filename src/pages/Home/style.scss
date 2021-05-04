@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.home-cont{ 
+
+align-items: center;
+background-color: $grisfondo;
+display: flex;
+flex-direction: column;
+height: 100vh;
+justify-content: center;
+width: 100%;
+
+.home-fakeimg{
+background-image: url(../../img/icon-search.png);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+height: 100px;
+width: 100px;
+
+}
+
+.home-text{
+  color: $gristext;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  margin: 25px;  
+}
+.home-text-a{
+
+&:link, &:visited, &:active{
+  text-decoration:none;
+  color: $gristext;
+}
+}
+}
