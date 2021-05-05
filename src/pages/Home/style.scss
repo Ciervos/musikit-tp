@@ -11,12 +11,17 @@ justify-content: center;
 width: 100%;
 
 .home-fakeimg{
-background-image: url(../../img/icon-search.png);
+background-image: url(../../img/login-mascot.gif);
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
+border-radius: 25px;
 height: 100px;
 width: 100px;
+
+&:hover{
+  background-image: url(../../img/login-mascot-hover.gif); 
+}
 
 }
 
