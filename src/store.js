@@ -7,7 +7,7 @@ const InitialState = {
   token: "",
   name: "Loading...",
   avatar: placeholder,
-  mainurl: "http://localhost:3000", 
+  mainurl: "https://musikittp.vercel.app", 
   playertrack:{
    name: "Purge The Poison",
    author: "MARINA", 
